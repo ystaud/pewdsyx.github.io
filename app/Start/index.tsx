@@ -60,4 +60,4 @@ const Start = () => {
   );
 };
 
-export default Home;
+export default Start;
