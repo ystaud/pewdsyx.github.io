@@ -42,7 +42,7 @@ jobs:
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add .
-          git commit -m "Set custom domain"
+          git commit -m "Set custom domain."
           git remote add origin "https://github.com/${{ github.repository }}.git"  # Add remote repository URL
           git push --force --quiet -v origin HEAD:${{ github.ref }}  # Push with verbose output for debugging
         env:
