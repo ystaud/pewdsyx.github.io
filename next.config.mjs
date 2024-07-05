@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
+    images: {
+        unoptimized: true,
+      },
     // If your project uses dynamic routes or other advanced features,
     // you might need to make additional configurations.
     // For example, to handle base paths:
