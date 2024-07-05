@@ -1,4 +1,4 @@
-import Start from '../app/Start';
+import Start from './start/page';
 
 const Home = () => {
   return (
