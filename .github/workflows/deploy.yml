@@ -43,4 +43,7 @@ jobs:
           git config user.email "actions@github.com"
           git add .
           git commit -m "Set custom domain"
-          git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref }}
+          git remote add origin "https://github.com/${{ github.repository }}.git"  # Add remote repository URL
+          git push --force --quiet origin HEAD:${{ github.ref }}  # Push to remote repository using origin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GITHUB_TOKEN is available for authentication
