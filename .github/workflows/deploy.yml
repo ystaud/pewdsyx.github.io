@@ -44,6 +44,6 @@ jobs:
           git add .
           git commit -m "Set custom domain"
           git remote add origin "https://github.com/${{ github.repository }}.git"  # Add remote repository URL
-          git push --force --quiet origin HEAD:${{ github.ref }}  # Push to remote repository using origin
+          git push --force --quiet -v origin HEAD:${{ github.ref }}  # Push with verbose output for debugging
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure GITHUB_TOKEN is available for authentication
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
